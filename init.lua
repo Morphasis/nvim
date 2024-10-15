@@ -103,7 +103,9 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-
+-- Custom jack shortcuts that i keep reusing
+vim.keymap.set("n", "<leader>je", ":Explore<enter>", { desc = "Explorer for files" })
+vim.keymap.set("n", "<leader>jn", ":e %:h/", { desc = "Create new file in current dir" })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
