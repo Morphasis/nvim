@@ -105,6 +105,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Custom jack shortcuts that i keep reusing
 vim.keymap.set("n", "<leader>je", ":Explore<enter>", { desc = "Explorer for files" })
 vim.keymap.set("n", "<leader>jn", ":e %:h/", { desc = "Create new file in current dir" })
+vim.keymap.set("n", "<leader>jq", vim.diagnostic.open_float, { desc = "Open diagnostic" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -545,7 +546,7 @@ require("lazy").setup({
 				-- clangd = {},
 				-- gopls = {},
 				-- pyright = {},
-				-- rust_analyzer = {},
+				rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
