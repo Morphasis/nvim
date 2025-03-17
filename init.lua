@@ -368,6 +368,9 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+			vim.keymap.set("n", "<leader>st", function()
+				builtin.live_grep({ glob_pattern = { "*.tsx", "*.ts" } })
+			end, { desc = "Search in *.ts & *.tsx" })
 		end,
 	},
 
