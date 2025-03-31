@@ -388,6 +388,50 @@ require("lazy").setup({
 		},
 	},
 	{
+		"neoclide/coc.nvim",
+		branch = "release",
+		config = function()
+			-- Enable autocompletion from CoC
+			vim.o.completeopt = "menuone,noselect"
+
+			-- CoC global extensions for specific languages and tools
+			vim.g.coc_global_extensions = {
+				"coc-snippets", -- Snippets support
+				"coc-pyright", -- Python support
+				"coc-tsserver", -- TypeScript/JavaScript support
+				"coc-json", -- JSON support
+				"coc-html", -- HTML support
+				"coc-css", -- CSS support
+			}
+
+			-- CoC keymaps for navigation and completions
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>gd",
+				':call CocActionAsync("jumpDefinition")<CR>',
+				{ noremap = true, silent = true }
+			)
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>gr",
+				':call CocActionAsync("jumpReferences")<CR>',
+				{ noremap = true, silent = true }
+			)
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>gi",
+				':call CocActionAsync("jumpImplementation")<CR>',
+				{ noremap = true, silent = true }
+			)
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>rn",
+				':call CocActionAsync("rename")<CR>',
+				{ noremap = true, silent = true }
+			)
+		end,
+	},
+	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
 		dependencies = {
