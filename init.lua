@@ -114,7 +114,7 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 -- Custom jack shortcuts that i keep reusing
-vim.keymap.set("n", "<leader>je", ":Explore<enter>", { desc = "Explorer for files" })
+vim.keymap.set("n", "<leader>je", ":NvimTreeOpen<enter>", { desc = "Explorer for files" })
 vim.keymap.set("n", "<leader>jn", ":e %:h/", { desc = "Create new file in current dir" })
 vim.keymap.set("n", "<leader>jq", vim.diagnostic.open_float, { desc = "Open diagnostic" })
 
